@@ -1,11 +1,13 @@
 # windowsPassDisabler
 This script allows you to disable **Windows** password in only **4 seconds**.
 # Warning ⚠️
-Everything in this repository is **strictly** for educational purposes. Notice **I am not responsible** for stolen data. **You are responsible** for your actions using developed script for **BadUSB**
+Everything in this repository is **strictly** for educational purposes. Notice **I am not responsible** for stolen data. **You are responsible** for your actions using developed script for **BadUSB**.
 # About ℹ️
 This script start **powershell** from run and **disable** password from it.
 ## NB
 You can customize the **delay** according to the speed of the computer in which you plug the **BadUSB**.
+## NB n°2
+You can copy code from **windowsPassDisabler.txt** or use directly **windowsPassDisabler.ino**.
 # Getting Started ✔️
 ## Requirments
 1. Have a **BadUSB**
