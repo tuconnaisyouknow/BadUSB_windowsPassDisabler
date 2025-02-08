@@ -1,29 +1,38 @@
-# windowsPassDisabler
-# Warning ⚠️
-Everything in this repository is **strictly** for educational purposes. Notice **I am not responsible** for stolen data. **You are responsible** for your actions using developed script for **BadUSB**.
-# About ℹ️
-This script allows you to disable your victim's Windows password in a few seconds.
-### NB n°1
-You can customize the **delay** according to the speed of the computer in which you plug the **BadUSB**.
-### NB n°2
-When you plug the BadUSB in a PC you  have to wait for the caps lock to flash to unplug it.
-# Getting Started ✔️
-## Requirments
-1. Have a **BadUSB**;
+# 🔒 windowsPassDisabler  
 
-2. Install **Arduino software** [here](https://www.arduino.cc/en/software) (if you have a BadUSB based on Arduino);
-## Install
-1. Download this repository;
-**Linux :**
-```
-git clone https://github.com/tuconnaisyouknow/BadUSB_windowsPassDisabler
-cd BadUSB_windowsPassDisabler
-```
-**Windows :** Click on green button on right top of main page. Then click on "Download Zip" and extract zip file.
+## ⚠️ Warning  
+Everything in this repository is **strictly** for educational purposes. **I am not responsible** for any stolen data. **You are responsible** for your actions when using this script for **BadUSB**.  
 
-2. Put the .ino or .txt file in your BadUSB;
+## ℹ️ About  
+This script allows you to **disable** a victim's **Windows password** in just a few seconds.  
 
-3. Find a victim and enjoy !
-## Requirments for victim PC
-* Turn off caps lock;
-* Switch the keyboard layout to English;
+## 🔑 Key Information for Users  
+
+### 🕒 Adjusting Delay  
+You can **customize the delay** based on the **speed of the target machine** where you plug in the **BadUSB**.  
+
+### ⏳ Waiting for Execution  
+When you plug the **BadUSB** into a PC, **wait for the Caps Lock to flash** before unplugging it.  
+
+# 🚀 Getting Started  
+
+## 📌 Requirements  
+✔️ A **BadUSB**  
+
+## ⚙️ Installation  
+
+1️⃣ **Download this repository**  
+
+   🔹 **Linux:**  
+   ```bash
+   git clone https://github.com/tuconnaisyouknow/BadUSB_windowsPassDisabler
+   cd BadUSB_windowsPassDisabler
+   ```  
+
+   🔹 **Windows:**  
+   - Click the **green "Code" button** at the top right.  
+   - Click **"Download ZIP"** and extract it.  
+
+2️⃣ **Put the `.txt` file in your BadUSB**  
+
+3️⃣ **Find a victim and enjoy!** 🎭  
